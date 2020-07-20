@@ -18,6 +18,7 @@ type IssConfig struct {
 	ForwardDest               string        `env:"FORWARD_DEST,required"`
 	ForwardDestConnectTimeout time.Duration `env:"FORWARD_DEST_CONNECT_TIMEOUT,default=10s"`
 	ForwardCount              int           `env:"FORWARD_COUNT,default=4"`
+	HttpHost                  string        `env:"HOST"`
 	HttpPort                  string        `env:"PORT,required"`
 	EnforceSsl                bool          `env:"ENFORCE_SSL,default=false"`
 	PemFile                   string        `env:"PEMFILE"`

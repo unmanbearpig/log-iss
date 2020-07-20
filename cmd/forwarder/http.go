@@ -198,7 +198,7 @@ func (s *httpServer) Run() error {
 		s.pSuccesses.Inc(1)
 	})
 
-	return http.ListenAndServe(":"+s.Config.HttpPort, nil)
+	return http.ListenAndServe(s.Config.HttpHost+":"+s.Config.HttpPort, nil)
 }
 
 func (s *httpServer) awaitShutdown() {
